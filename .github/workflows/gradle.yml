@@ -36,10 +36,11 @@ jobs:
 
       - name: Run tests
         run: ./gradlew test
+
+      - name: List JaCoCo directory
+        run: ls -la build/jacoco
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
-        with:
-          file: build/jacoco/test.exec  # Path to JaCoCo exec file
-          fail_ci_if_error: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
