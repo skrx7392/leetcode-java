@@ -49,7 +49,7 @@ tasks.test {
         events "passed", "skipped", "failed"
     }
 }
-
+check.dependsOn jacocoTestReport
 tasks.test.finalizedBy(tasks.jacocoTestReport)
 
 distributions {
