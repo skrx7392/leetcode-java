@@ -36,6 +36,10 @@ jobs:
 
       - name: Run tests
         run: ./gradlew test
+
+      - name: List JaCoCo directory
+        run: ls -la build/jacoco
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         env:
