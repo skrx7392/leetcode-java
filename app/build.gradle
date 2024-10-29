@@ -1,6 +1,7 @@
 plugins {
     id 'application'
     id 'checkstyle'
+    id 'jacoco' // Add JaCoCo plugin
 }
 
 repositories {
@@ -28,6 +29,18 @@ application {
 checkstyle {
     toolVersion = "10.9.1"
     configFile = file("config/checkstyle/checkstyle.xml")
+}
+
+jacoco {
+    toolVersion = "0.8.12" // Specify the latest version
+}
+
+tasks.jacocoTestReport {
+    dependsOn tasks.test // Ensure tests run first
+    reports {
+        xml.required = false
+        html.required = true
+    }
 }
 
 tasks.test {
