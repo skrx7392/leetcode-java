@@ -1,17 +1,18 @@
+import com.github.spotbugs.snom.SpotBugsTask
+
 plugins {
     id 'application'
     id 'checkstyle'
-    id 'com.github.spotbugs' version '5.0.13'
+    id 'com.github.spotbugs' version '6.0.25'
 }
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 dependencies {
     implementation(libs.guava)
-
-    // Use JUnit 5 for testing
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
 }
 
@@ -33,7 +34,18 @@ checkstyle {
 }
 
 spotbugs {
-    toolVersion = '5.0.13'
+    toolVersion = '6.0.25'
+}
+
+tasks.withType(SpotBugsTask).configureEach {
+    reports {
+        html {
+            required.set(true) // Set to true for generating HTML report
+        }
+        xml {
+            required.set(false) // Set to false to disable XML report
+        }
+    }
 }
 
 tasks.test {

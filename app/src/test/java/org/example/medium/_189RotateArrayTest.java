@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 import java.util.Arrays;
 
 import static org.example.utils.TestUtils.convertStringToIntArray;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class _189RotateArrayTest {
 
