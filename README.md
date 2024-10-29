@@ -22,7 +22,7 @@ The project is organized as follows:
 
 ## Prerequisites
 
-- **Java 17** or higher
+- **Java 21** or higher
 - **Gradle** (used to build, test, and manage dependencies)
 
 ## Getting Started
