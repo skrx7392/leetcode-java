@@ -50,6 +50,8 @@ tasks.test {
     }
 }
 
+tasks.test.finalizedBy(tasks.jacocoTestReport)
+
 distributions {
     main {
         contents {
