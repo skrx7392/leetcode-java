@@ -1,9 +1,6 @@
-import com.github.spotbugs.snom.SpotBugsTask
-
 plugins {
     id 'application'
     id 'checkstyle'
-    id 'com.github.spotbugs' version '6.0.25'
 }
 
 repositories {
@@ -31,21 +28,6 @@ application {
 checkstyle {
     toolVersion = "10.9.1"
     configFile = file("config/checkstyle/checkstyle.xml")
-}
-
-spotbugs {
-    toolVersion = '6.0.25'
-}
-
-tasks.withType(SpotBugsTask).configureEach {
-    reports {
-        html {
-            required.set(true) // Set to true for generating HTML report
-        }
-        xml {
-            required.set(false) // Set to false to disable XML report
-        }
-    }
 }
 
 tasks.test {
