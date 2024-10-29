@@ -1,9 +1,9 @@
-package easy;
+package org.example.easy;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static utils.TestUtils.convertStringToIntArray;
+import static org.example.utils.TestUtils.convertStringToIntArray;
 import static org.junit.jupiter.api.Assertions.*;
 
 class _169MajorityElementTest {

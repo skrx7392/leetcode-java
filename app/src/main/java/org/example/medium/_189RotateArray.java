@@ -1,4 +1,4 @@
-package medium;
+package org.example.medium;
 
 public class _189RotateArray {
     public void rotate(int[] nums, int k) {
