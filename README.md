@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/skrx7392/leetcode-java/actions/workflows/gradle.yml/badge.svg)](https://github.com/skrx7392/leetcode-java/actions/workflows/gradle.yml)
+
 # LeetCode Java Solutions
 
 This repository contains Java solutions for a variety of LeetCode problems, organized by categories and supported by tests. Each solution aims to provide clear, efficient code that can be reused for learning and problem-solving.
